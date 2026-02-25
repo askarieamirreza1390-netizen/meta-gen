@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبورد گروه</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1 id="welcome"></h1>
+            <button onclick="logout()" class="logout-btn">خروج</button>
+        </header>
+
+        <div class="stats-box">
+            <h2>📊 پیشرفت من</h2>
+            <div class="progress-container">
+                <div class="progress-item">
+                    <span>🎥 فیلم‌ها:</span>
+                    <span id="videoProgress"></span>
+                </div>
+                <div class="progress-item">
+                    <span>📄 PDFها:</span>
+                    <span id="pdfProgress"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="group-box">
+            <h2>👥 هم‌گروهی‌های من</h2>
+            <div id="groupMembers" class="members-list"></div>
+        </div>
+
+        <div class="action-box">
+            <a href="materials.html" class="action-btn">📚 رفتن به مطالب آموزشی</a>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
