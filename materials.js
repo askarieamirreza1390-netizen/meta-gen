@@ -22,6 +22,10 @@ function goToStage(stageId) {
     window.location.href = `stage.html?stage=${stageId}`;
 }
 
+function goBack() {
+    window.location.href = 'dashboard.html';
+}
+
 function logout() {
     sessionStorage.removeItem('currentUser');
     window.location.href = 'index.html';
