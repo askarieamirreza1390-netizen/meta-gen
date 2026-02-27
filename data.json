@@ -6,7 +6,7 @@
       "password": "1234",
       "fullname": "امیررضا عسکریه",
       "group": "درس خوانان",
-      "isLeader": "true"
+      "isLeader": true
     },
     {
       "id": 1002,
