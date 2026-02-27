@@ -8,17 +8,28 @@ document.getElementById('welcome').innerHTML = `خوش آمدید، ${currentUse
 fetch('data.json')
     .then(res => res.json())
     .then(data => {
-        // درصدها
-        const videoPercent = Math.round((currentUser.videosWatched / currentUser.totalVideos) * 100);
-        const pdfPercent = Math.round((currentUser.pdfsRead / currentUser.totalPdfs) * 100);
-        document.getElementById('videoProgress').innerHTML = 
-            `${currentUser.videosWatched} از ${currentUser.totalVideos} (${videoPercent}%)`;
-        document.getElementById('pdfProgress').innerHTML = 
-            `${currentUser.pdfsRead} از ${currentUser.totalPdfs} (${pdfPercent}%)`;
+        // محاسبه تعداد کل ویدیوها و PDFها
+        let totalVideos = 0;
+        let totalPdfs = 0;
+        data.stages.forEach(stage => {
+            totalVideos += stage.videos.length;
+            totalPdfs += stage.pdfs.length;
+        });
 
-        // هم‌گروهی‌ها
-        const group = data.groups.find(g => g.name === currentUser.groupName);
-        const members = data.users.filter(u => group.members.includes(u.id) && u.id !== currentUser.id);
+        const watchedVideos = getTotalWatchedVideos(currentUser.nationalCode);
+        const readPdfs = getTotalReadPdfs(currentUser.nationalCode);
+
+        const videoPercent = totalVideos > 0 ? Math.round((watchedVideos / totalVideos) * 100) : 0;
+        const pdfPercent = totalPdfs > 0 ? Math.round((readPdfs / totalPdfs) * 100) : 0;
+
+        document.getElementById('videoProgress').innerHTML = 
+            `${watchedVideos} از ${totalVideos} (${videoPercent}%)`;
+        document.getElementById('pdfProgress').innerHTML = 
+            `${readPdfs} از ${totalPdfs} (${pdfPercent}%)`;
+
+        // نمایش هم‌گروهی‌ها
+        const group = currentUser.group;
+        const members = data.users.filter(u => u.group === group && u.id !== currentUser.id);
         
         let membersHtml = '';
         members.forEach(m => {
