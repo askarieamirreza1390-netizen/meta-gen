@@ -2,10 +2,10 @@
   "users": [
     {
       "id": 1001,
-      "nationalCode": "0012345678",
+      "nationalCode": "4422029967",
       "password": "1234",
-      "fullname": "امیرحسین کریمی",
-      "group": "آلفا",
+      "fullname": "امیررضا عسکریه",
+      "group": "درس خوانان",
       "isLeader": true
     },
     {
@@ -13,7 +13,7 @@
       "nationalCode": "0012345679",
       "password": "1234",
       "fullname": "سارا محمدی",
-      "group": "آلفا",
+      "group": "درس خوانان",
       "isLeader": false
     },
     {
@@ -21,7 +21,7 @@
       "nationalCode": "0012345680",
       "password": "1234",
       "fullname": "علی رضایی",
-      "group": "آلفا",
+      "group": "درس خوانان",
       "isLeader": false
     },
     {
