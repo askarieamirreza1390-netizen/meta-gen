@@ -1,20 +1,20 @@
 function login() {
     const code = document.getElementById('nationalCode').value.trim();
-    if (!code) {
-        showError('کد ملی را وارد کنید');
+    const pass = document.getElementById('password').value.trim();
+    if (!code || !pass) {
+        showError('کد ملی و رمز عبور را وارد کنید');
         return;
     }
 
     fetch('data.json')
         .then(res => res.json())
         .then(data => {
-            const user = data.users.find(u => u.nationalCode === code);
+            const user = data.users.find(u => u.nationalCode === code && u.password === pass);
             if (user) {
-                // ذخیره اطلاعات کاربر در sessionStorage
                 sessionStorage.setItem('currentUser', JSON.stringify(user));
                 window.location.href = 'dashboard.html';
             } else {
-                showError('کاربری با این کد ملی یافت نشد');
+                showError('کد ملی یا رمز عبور اشتباه است');
             }
         })
         .catch(err => {
