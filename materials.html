@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>انتخاب مرحله</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>📌 مراحل مسابقه</h1>
-            <button onclick="logout()" class="logout-btn">خروج</button>
+            <div>
+                <button onclick="goBack()" class="back-btn">🔙 بازگشت به داشبورد</button>
+                <button onclick="logout()" class="logout-btn">خروج</button>
+            </div>
         </header>
 
         <div id="stagesList" class="stages-grid"></div>
     </div>
+    <script src="progress.js"></script>
     <script src="materials.js"></script>
 </body>
 </html>
