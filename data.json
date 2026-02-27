@@ -3,67 +3,42 @@
     {
       "id": 1001,
       "nationalCode": "0012345678",
+      "password": "1234",
       "fullname": "امیرحسین کریمی",
-      "groupName": "آلفا",
-      "isLeader": true,
-      "videosWatched": 5,
-      "pdfsRead": 3,
-      "totalVideos": 10,
-      "totalPdfs": 8
+      "group": "آلفا",
+      "isLeader": true
     },
     {
       "id": 1002,
       "nationalCode": "0012345679",
+      "password": "1234",
       "fullname": "سارا محمدی",
-      "groupName": "آلفا",
-      "isLeader": false,
-      "videosWatched": 7,
-      "pdfsRead": 4,
-      "totalVideos": 10,
-      "totalPdfs": 8
+      "group": "آلفا",
+      "isLeader": false
     },
     {
       "id": 1003,
       "nationalCode": "0012345680",
+      "password": "1234",
       "fullname": "علی رضایی",
-      "groupName": "آلفا",
-      "isLeader": false,
-      "videosWatched": 2,
-      "pdfsRead": 6,
-      "totalVideos": 10,
-      "totalPdfs": 8
+      "group": "آلفا",
+      "isLeader": false
     },
     {
       "id": 1004,
       "nationalCode": "0012345681",
+      "password": "1234",
       "fullname": "زهرا احمدی",
-      "groupName": "بتا",
-      "isLeader": true,
-      "videosWatched": 9,
-      "pdfsRead": 7,
-      "totalVideos": 10,
-      "totalPdfs": 8
+      "group": "بتا",
+      "isLeader": true
     },
     {
       "id": 1005,
       "nationalCode": "0012345682",
+      "password": "1234",
       "fullname": "محمد حسینی",
-      "groupName": "بتا",
-      "isLeader": false,
-      "videosWatched": 4,
-      "pdfsRead": 5,
-      "totalVideos": 10,
-      "totalPdfs": 8
-    }
-  ],
-  "groups": [
-    {
-      "name": "آلفا",
-      "members": [1001, 1002, 1003]
-    },
-    {
-      "name": "بتا",
-      "members": [1004, 1005]
+      "group": "بتا",
+      "isLeader": false
     }
   ],
   "stages": [
@@ -71,24 +46,22 @@
       "id": 1,
       "name": "مرحله اول مسابقه",
       "videos": [
-        { "title": "آموزش مقدماتی پایتون", "url": "https://www.youtube.com/embed/VIDEO_ID_1" },
-        { "title": "آموزش پیشرفته پایتون", "url": "https://www.youtube.com/embed/VIDEO_ID_2" }
+        { "id": "v1_1", "title": "آموزش مقدماتی پایتون", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+        { "id": "v1_2", "title": "آموزش پیشرفته پایتون", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
       ],
       "pdfs": [
-        { "title": "جزوه فصل اول", "url": "files/chapter1.pdf" },
-        { "title": "تمرینات مرحله اول", "url": "files/exercises1.pdf" }
+        { "id": "p1_1", "title": "جزوه فصل اول", "url": "files/chapter1.pdf" },
+        { "id": "p1_2", "title": "تمرینات مرحله اول", "url": "files/exercises1.pdf" }
       ]
     },
     {
       "id": 2,
       "name": "مرحله دوم مسابقه",
       "videos": [
-        { "title": "آموزش جنگو قسمت اول", "url": "https://www.youtube.com/embed/VIDEO_ID_3" },
-        { "title": "آموزش جنگو قسمت دوم", "url": "https://www.youtube.com/embed/VIDEO_ID_4" }
+        { "id": "v2_1", "title": "آموزش جنگو قسمت اول", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
       ],
       "pdfs": [
-        { "title": "مستندات جنگو", "url": "files/django.pdf" },
-        { "title": "پروژه عملی", "url": "files/project.pdf" }
+        { "id": "p2_1", "title": "مستندات جنگو", "url": "files/django.pdf" }
       ]
     }
   ]
